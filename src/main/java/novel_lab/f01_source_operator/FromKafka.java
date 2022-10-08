@@ -31,11 +31,10 @@ public class FromKafka {
             String gender  = arr[4];
             Tuple4 tuple4 = new Tuple4(bid,title,writer,gender);
             return tuple4;
+
         })
                 .returns(Types.TUPLE(Types.STRING, Types.STRING, Types.STRING, Types.STRING))
                 .print();
-
-
         env.execute();
 
     }
